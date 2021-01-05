@@ -36,7 +36,7 @@ section{
   padding: 0 auto 100px auto;
   padding-bottom: 100px;
   margin-top: 0px;
-  background: radial-gradient(rgb(255, 255, 255),rgb(116, 113, 113)); 
+  background: radial-gradient(rgb(255, 255, 255),rgb(255, 255, 255)); 
 }
 
 .container{
