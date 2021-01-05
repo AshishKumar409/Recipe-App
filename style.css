@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+  transition: all 1s;
+  
+}
+
+.img-container{
+  overflow: hidden;
+}
+img:hover{
+  transform: scale(1.09);
+}
+
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 auto 100px auto;
+  padding-bottom: 100px;
+  margin-top: 0px;
+  background: radial-gradient(rgb(255, 255, 255),rgb(116, 113, 113)); 
+}
+
+.container{
+  width: 90%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid white; 
+}
+
+.app{
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 120px;
+ 
+  margin-bottom: 10px;
+  color: ghostwhite;
+  height:300px;
+  background: url(./background.png),radial-gradient(rgb(245, 220, 236),rgb(0, 0, 0));
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+form{
+  width: 90%;
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: rgb(233,233,233);
+  border:2px solid;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+form input{
+  width: 90%;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+.search-result{
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap:25px;
+  grid-template: auto/ repeat(auto-fit,minmax(300px,1fr));
+}
+
+.item{
+  width: 100%;
+  border-radius: 8px;
+  color: aliceblue;
+  background-color: #0e0d0d;
+  padding:0.8rem;
+  line-height: 25px;
+}
+
+
+
+.item .flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item .title{
+ margin-right:0px;
+ padding-left: 0px;
+}
+
+a{
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  font-size: 1rem;
+  color: rgb(243, 243, 243);
+  margin-top: 20px;
+  background-color: rgba(148, 148, 148, 0.2);
+  padding: 10px 0;
+  align-self: flex-start;
+  
+}
+
+button{
+  outline: none;
+  border: none;
+  padding: 2px;
+  margin: 0;
+  height: 50px; 
+  transition: all 0.2s;
+}
+
+.item-data{
+  color: aliceblue;
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
