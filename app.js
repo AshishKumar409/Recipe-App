@@ -3,39 +3,40 @@ const searchInput = document.querySelector('input')
 const appId = '253d52e6'
 const appKey = 'a6285899e569c14f3a58db5ab147edec'
 let firstDiv = document.querySelector('.search-result')
+let  fragment = new DocumentFragment()
+let  fragmentOne = new DocumentFragment()
 
 let button = document.querySelector('button')
-button.addEventListener('click',clicked)
 
-function clicked(){
+let searchData = ''
+
+
+searchForm.addEventListener('submit',(e)=>{
+   e.preventDefault()
   button.style.color = '#fff'
   setTimeout(normal,90)
   function normal(){
     button.style.color = null
   }
    searchData=searchInput.value
-  console.log(searchData)
   fetchData(searchData); 
-}
-let searchData = ''
-
-
-searchForm.addEventListener('submit',(e)=>{
-   e.preventDefault()
-  searchData=searchInput.value
-  console.log(searchData)
-  fetchData(searchData); 
+  
+  
 })
 
 
  async function fetchData(searchFood){
    firstDiv.innerHTML = null
   let url = `https://api.edamam.com/search?q=${searchFood}&app_id=${appId}&app_key=${appKey}`;
-  console.log(url);
+  
   let response = await fetch(url)
   let JsonData = await response.json()
   let array  = await JsonData.hits
-  await array.forEach((items)=>{
+  
+  
+  array.forEach((items)=>{
+  
+   
    
   let item = document.createElement('div')
   item.classList.add('item')
@@ -73,14 +74,18 @@ searchForm.addEventListener('submit',(e)=>{
   Calories:${Math.round(items.recipe.calories)} <br>
   Fat:${Math.round(items.recipe.totalNutrients.FAT.quantity)} g`
   
-  item.appendChild(flexContainer)
-  item.appendChild(p)
+  
+  fragment.appendChild(flexContainer)
+  fragment.appendChild(p)
+  item.appendChild(fragment)
+  fragmentOne.appendChild(item)
+  
     
 
-    firstDiv.appendChild(item)
+    
     
   })
-
+ firstDiv.appendChild(fragmentOne)
 
   
 }
