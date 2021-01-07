@@ -65,7 +65,7 @@ form{
   width: 80%;
   margin: 20px auto;
   max-width: 400px;
-  background-color: rgb(233,233,233);
+  background-color: #eee;
   border:2px solid;
   border-radius: 10px;
   overflow: hidden;
@@ -131,6 +131,7 @@ button{
   padding: 2px;
   margin: 0;
   transition: all 0.2s;
+  background-color:#eee;
 }
 
 .item-data{
